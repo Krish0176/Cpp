@@ -31,6 +31,16 @@ public:
         curr->next = newNode; 
         return head; // Added missing semicolon
     }
+    Node* deleteatfirst(Node *head){
+    if(head == NULL) return NULL;
+
+    Node *temp = head; // making a temp variable for deleting
+    head = head->next;
+    temp->next = NULL;
+    delete temp;
+    return head;
+}
+
 };
 
 // Helper function to print the list and verify it works
@@ -55,6 +65,8 @@ int main() {
 
     // Print results
     printList(head);
-
+    head = head->deleteatfirst(head);
+  
+    printList(head);
     return 0;
 }
