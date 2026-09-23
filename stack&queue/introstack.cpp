@@ -65,5 +65,6 @@ int main()
     s.push(50);
 
     cout << s.peak();
+    s.pop();
     return 0;
 }
