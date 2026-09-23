@@ -39,6 +39,19 @@ public:
         return arr[top];
     }
 
+    int pop()
+    {
+        if (top == -1)
+        {
+            cout << "Stack is empty";
+            return -1;
+        }
+
+        int val = arr[top];
+        top--;
+        return val;
+    }
+
     
 };
 
