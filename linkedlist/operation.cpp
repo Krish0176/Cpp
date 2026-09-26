@@ -15,6 +15,18 @@ void insertatfirst(Node*& head,int value){
     head = newnode;
 }
 void insert(Node*& head,int value){
+    Node* newnode = new Node(value);
+    if(head == nullptr){
+        head = newnode;
+        return;
+    }
+    Node *temp = head;
+    while (temp->next !=nullptr)
+    {
+        temp = temp->next;
+        /* code */
+    }
+    temp->next = newnode;
     
 }
 void display(Node*& head){
