@@ -11,29 +11,28 @@ class Node{
     }
 };
 void insertion(Node*& head,int value){
-    Node *newnode = new Node(value);
-    newnode->next = head;
-    head= newnode;
+   Node* newnode = new Node(value);
+   newnode->next = head;
+    head = newnode;
 }
 void insertionatend(Node*& head,int value){
    Node* newnode = new Node(value);
-   if(head->next == nullptr){
+   if(head == nullptr){
+    newnode->next = head;
     head = newnode;
+
    }
    Node* temp = head;
-   while(temp->next != nullptr){
+   while (temp->next != nullptr)
+   {
     temp = temp->next;
+    /* code */
    }
    temp->next = newnode;
+   
 }
 
-void inserstionatpos(Node*& head,int value,int pos){
-    Node* newnode = new Node(value);
 
-    if(pos==1){
-        newnode->next
-    }
-}
 void display(Node*& head){
     Node* temp = head;
     while(temp != nullptr){
